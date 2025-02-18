@@ -49,7 +49,7 @@ public class SimpleNPCPlayer extends Player {
         boolean hasDecentHand = evaluatePlayerHand().getValue() > HandRanks.HIGH_CARD.getValue();
         boolean betIsSmallPercentageOfBank = getGameState().getTableBet() < getBank() * 0.05;
         return hasDecentHand || betIsSmallPercentageOfBank;
-    }
+   }
 
     @Override
     protected boolean shouldAllIn() {
