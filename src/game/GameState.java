@@ -62,6 +62,7 @@ public class GameState {
         this.dealer = dealer;
         this.small = small;
         this.big = big;
+
     }
 
     /**

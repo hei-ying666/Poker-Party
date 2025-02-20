@@ -1,13 +1,11 @@
 package game; // Declares that this class belongs to the "game" package
 
 // Import necessary player classes from the "players" package
-import players.ConservativeNPCPlayer;
-import players.DongPlayer;
-import players.RandomPlayer;
-import players.SimpleNPCPlayer;
+import players.*;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 /**
  * The AddPlayers class is responsible for initializing and managing
@@ -46,6 +44,7 @@ public class AddPlayers {
 
 
         playersInGame.add(new DongPlayer("Dong_01"));
+        playersInGame.add(new JerryPlayer("jerry_01"));
     }
 
     /**
