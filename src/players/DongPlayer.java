@@ -6,6 +6,9 @@ import java.util.Random;
 
 public class DongPlayer extends Player {
 
+    private final Random random = new Random();
+
+
     public DongPlayer(String name) {
         super(name);
     }
@@ -19,10 +22,11 @@ public class DongPlayer extends Player {
         } else if (shouldCall()) {
             call();
         } else if (shouldRaise()) {
-            //raise(getGameState().getTableMinBet() * 2); // Raise aggressively
+            // raise(getGameState().getTableMinBet() * 2); // Raise aggressively
             //int raiseAmount = (int) (getGameState().getTableMinBet() * (1.5 + Math.random())); // More flexible raise
             //raise(raiseAmount);
-            int raiseAmount = (int) (getGameState().getTableMinBet() * (2 + random.nextDouble() * 2)); // Dynamic raise
+            //int raiseAmount = (int) (getGameState().getTableMinBet() * (2 + random.nextDouble() * 2)); // Dynamic raise
+            int raiseAmount = (int) (getGameState().getTableMinBet() * (2 + random.nextDouble() * 2));
             raise(raiseAmount);
         } else if (shouldAllIn()) {
             allIn();
@@ -59,3 +63,4 @@ public class DongPlayer extends Player {
 
     }
 }
+
